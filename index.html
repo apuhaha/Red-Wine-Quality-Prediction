@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wine Quality Model Deployment by Apurva Acharya for Statsly Analytics</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+  <div style="color:blue">
+  <div class="login">
+    
+	<h1>Wine Quality Prediction By Apurva Acharya for Statsly Analytics</h1>
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    <h2>Wine Quality Predection Deployment</h2>
+    <h3>fixed Acidity</h3>
+    	<input type="text" name="fixed acidity" placeholder="fixed acidity" required="required" />
+    <h3>volatile acidity</h3>
+        <input type="text" name="volatile acidity" placeholder="volatile acidity" required="required" />
+    <h3>citric acid</h3>
+		<input type="text" name="citric acid" placeholder="citrica cid" required="required" />
+    <h3>residual sugar</h3>
+		<input type="text" name="residual sugar" placeholder="residual sugar" required="required" />
+	<h3>chlorides</h3>
+        <input type="text" name="chlorides" placeholder="chlorides" required="required" />
+    <h3>free sulfur dioxide</h3>
+        <input type="text" name="free sulfur dioxide" placeholder="free sulfur dioxide" required="required" />
+    <h3>total sulfur dioxide</h3>
+        <input type="text" name="total sulfur dioxide" placeholder="total sulfur dioxide" required="required" />
+    <h3>density</h3>
+        <input type="text" name="density" placeholder="density" required="required" />
+    <h3>ph</h3>
+        <input type="text" name="pH" placeholder="ph" required="required" />
+    <h3>sulphates</h3>
+        <input type="text" name="sulphates" placeholder="sulphates" required="required" />
+    <h3>alcohol</h3>
+        <input type="text" name="alcohol" placeholder="alcohol" required="required" />
+
+
+       <br><br><button id="sub" type="submit " class="btn btn-primary btn-block btn-large">Predict</button>
+       <br>
+    </form>
+    
+   <br>
+   <br>
+   <h3>{{ Quality_of_wine_is }}<h3>
+
+</div>
+</body>
+</html>
